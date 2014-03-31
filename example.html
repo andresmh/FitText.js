@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>FitText</title>
+	<title>JUNE 4, 2014 - 5 PM PST <- CSCW PAPERS DEADLINE</title>
 
 	<style type="text/css">
+		* { margin: 0; padding: 0; }
+		html { 
+			background: url(http://i.imgur.com/jYPSr6l.gif) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		
 		body {
 		  background: #233a40; 
 		  color: #fff;
@@ -19,7 +27,7 @@
 			width: 100%;
 			margin:0px auto;
 		}
-		h1 {
+		h1, h1 a:link, h1 a:visited {
 			background: rgba(0,0,0,0.2);
 			text-align: center;
 			color:#fff;
@@ -41,19 +49,44 @@
 
 	<div class="container">
 		<header>
-		<h1 id="fittext1">Squeeze with FitText</h1>
-		<h1 id="fittext2">Squeeze with FitText</h1>
-		<h1 id="fittext3">Squeeze with FitText</h1>
+		<h1 id="fittext1">
+			<script>
+/*
+Count down until any date script-
+By JavaScript Kit (www.javascriptkit.com)
+Over 200+ free scripts here!
+*/
+
+//change the text below to reflect your own,
+var current="TODAY IS THE CSCW DEADLINE!"
+var montharray=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
+
+function countdown(yr,m,d){
+var today=new Date()
+var todayy=today.getYear()
+if (todayy < 1000)
+todayy+=1900
+var todaym=today.getMonth()
+var todayd=today.getDate()
+var todaystring=montharray[todaym]+" "+todayd+", "+todayy
+var futurestring=montharray[m-1]+" "+d+", "+yr
+var difference=(Math.round((Date.parse(futurestring)-Date.parse(todaystring))/(24*60*60*1000))*1)
+if (difference==0)
+document.write(current)
+else if (difference>0)
+document.write(difference+ " days until the papers <a href='http://cscw.acm.org/2015/submit/'>deadline</a>")
+}
+//enter the count down date using the format year/month/day
+countdown(2014,06,04)
+</script
+		</h1>
 		</header>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
  	<script src="jquery.fittext.js"></script>
 	<script type="text/javascript">
 		$("#fittext1").fitText();
-		$("#fittext2").fitText(1.2);
-		$("#fittext3").fitText(1.1, { minFontSize: '50px', maxFontSize: '75px' });
 	</script>
 	
 </body>
